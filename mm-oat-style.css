@@ -158,7 +158,7 @@ h1 .mm-prefix-color{
   }
   
   .mm-module-item {
-    width:18rem;
+    width:13.45rem;
     background-image: url("https://piedmont1-my.sharepoint.com/personal/melissaevans_piedmont_edu/Documents/images/dark-triangles.png");
     color: white;
     text-align: center;
@@ -175,7 +175,7 @@ h1 .mm-prefix-color{
     padding: 1rem 2rem;
   }
   .mm-mod-title {
-     height: 6rem;
+     min-height: 8.5rem;
     background-color: #144734;
     padding:1rem;
   }
