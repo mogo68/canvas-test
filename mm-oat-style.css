@@ -158,8 +158,8 @@ h1 .mm-prefix-color{
   }
   
   .mm-module-item {
-    width:13.45rem;
-    background-image: url("https://piedmont1-my.sharepoint.com/personal/melissaevans_piedmont_edu/Documents/images/dark-triangles.png");
+    width: 13.45rem;
+    background-color: #144734;
     color: white;
     text-align: center;
     border: 10px solid white;
@@ -167,17 +167,31 @@ h1 .mm-prefix-color{
     margin: 1rem;
   }
   .mm-module-item a{
-    text-decoration: none;
-    color: #fff;
+    text-decoration: none !important;
+    color: #fff !important;
+  }
+  h2 .mm-prefix-color{
+    color: #415364;
   }
   .mm-mod-number{
+    background-image: url("https://piedmont1-my.sharepoint.com/personal/melissaevans_piedmont_edu/Documents/images/dark-triangles.png");
     text-align:right;
-    padding: 1rem 2rem;
+    padding: 1rem;
+  }
+  .mm-mod-number h2{
+    font-family: 'Lato'!important;
+     font-size: clamp(1.5em, 2.5vw, 3em) !important;
+     font-weight: 900 !important;
   }
   .mm-mod-title {
-     min-height: 8.5rem;
+    height: auto;
     background-color: #144734;
     padding:1rem;
+    font-family: 'Lato'!important;
+    font-weight: 300 !important;
+    margin-top: 0 !important;
+    font-size: clamp(1em, 1vw, 1.5em) !important;
+    overflow: hidden;
   }
 
   /**********@media**********/
