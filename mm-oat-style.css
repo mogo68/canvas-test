@@ -71,15 +71,6 @@ body:not(.full-width):not(.outcomes):not(.body--login-confirmation) .ic-Layout-w
 
 /********Front Page Banner********/
 
-.mm-readonly {
--webkit-touch-callout: none;
--webkit-user-select: none;
--khtml-user-select: none;
--moz-user-select: none;
--ms-user-select: none;
-user-select: none;
-}
-
 .header {
     background-image: url("https://piedmont1-my.sharepoint.com/personal/melissaevans_piedmont_edu/Documents/images/mm-oat-lion.png");
     background-repeat: no-repeat;
@@ -144,57 +135,101 @@ h1 .mm-prefix-color{
     padding: 1rem;
   }
 
+  /**********Orientation Section**********/
+
+  .mm-orientation-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    list-style: none;
+    text-align: center;
+    color: #333;
+    background-color: #eee;
+    margin: 0;
+    padding: 2rem;
+    border-top: 1rem solid #fff;
+    border-bottom: 1rem solid #fff;
+
+  }
+  
+  .mm-orientation-wrapper h2 {
+    font-family: 'Lato'!important;
+     font-size: clamp(2em, 3vw, 4em) !important;
+     font-weight: 900 !important;
+  }
+  
+  .mm-orientation-wrapper p {
+    font-family: 'Lato'!important;
+    font-weight: 500 !important;
+    margin-top: 0 !important;
+    font-size: clamp(1em, 1vw, 2em) !important;
+  }
+  
+  h2 .mm-first-color{
+    color: #415364;
+  }
   
   /**********Module Cards**********/
+ 
   .mm-modules-cont {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-content: stretch;
-    padding: 0;
-    margin: 0;
+    flex-flow: row wrap;
+    justify-content: space-around;
     list-style: none;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .mm-module-item {
-    width: 13.45rem;
-    background-color: #144734;
+    background-color: #000;
+    border: 0.5rem solid white;
     color: white;
     text-align: center;
-    border: 10px solid white;
-    box-shadow: 1px 1px 2px #aaaaaa;
-    margin: 1rem;
+    padding: 1rem 1rem 2rem 1rem;
+    width: 15rem;
   }
-  .mm-module-item a{
-    text-decoration: none !important;
-    color: #fff !important;
-  }
+  
   h2 .mm-prefix-color{
     color: #415364;
   }
+  
   .mm-mod-number{
-    background-image: url("https://piedmont1-my.sharepoint.com/personal/melissaevans_piedmont_edu/Documents/images/dark-triangles.png");
-    text-align:right;
-    padding: 1rem;
-  }
-  .mm-mod-number h2{
     font-family: 'Lato'!important;
-     font-size: clamp(1.5em, 2.5vw, 3em) !important;
+     font-size: clamp(2em, 2.5vw, 3em) !important;
      font-weight: 900 !important;
+      line-height: 1;
   }
   .mm-mod-title {
-    height: auto;
-    background-color: #144734;
-    padding:1rem;
+    height: 6.5rem;
+    padding: 0.5rem 1rem;
     font-family: 'Lato'!important;
     font-weight: 300 !important;
-    margin-top: 0 !important;
+    margin: 0 1rem 5rem 1rem !important;
     font-size: clamp(1em, 1vw, 1.5em) !important;
+  }
+  .mm-mod-start {
+    background-image: url("https://piedmont1-my.sharepoint.com/personal/melissaevans_piedmont_edu/Documents/images/green-triangles.png");
+    border: 0.5rem solid #000;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    font-family: 'Lato'!important;
+    font-weight: 900 !important;
+    font-size: clamp(1em, 1vw, 2em) !important;
+    text-decoration: none !important;
+    color: #fff !important;
+    padding: 1rem 3rem;
     overflow: hidden;
   }
+  .mm-mod-start:hover {
+    opacity: 80%;
+  }
+  
 
   /**********@media**********/
+
 
   @media all and (max-width: 1200px) {
     .navigation {
@@ -206,12 +241,22 @@ h1 .mm-prefix-color{
     .header .mm-title {
       text-align: right;
     }
-    .mm-logo, .mm-module-item {
+    .mm-logo {
       justify-content: space-around;
     }
+   .mm-module-item {
+      justify-content: column;
+     width: 40%;
+    }
   }
-
-  @media all and (max-width: 1155px) {
+@media all and (max-width: 1155px){
+  .header {
+     flex: 2 0px;
+     justify-content: center;
+     background-image: none;
+    }
+}
+  @media all and (max-width: 800px) {
     .navigation {
       flex-flow: row wrap;
       padding: 0;
@@ -225,16 +270,11 @@ h1 .mm-prefix-color{
     .navigation li:last-of-type a {
       border-bottom: none;
     }
-    .header {
-     flex: 2 0px;
-     background-image: none;
-    }
     .mm-title {
-      justify-content: center;
       text-align: center !important;
       padding: 1rem;
     }
-     .navigation-logo, .mm-module-item {
+     .navigation-logo{
       flex-flow: column wrap;
       padding: 0 1rem;
     }
@@ -246,5 +286,12 @@ h1 .mm-prefix-color{
     }
     .navigation-logo li:last-of-type a {
       border-bottom: none;
+    }
+    .mm-module-item {
+      width: 95%;
+      flex-flow: row wrap;
+    }
+    .mm-module-title {
+      height: 2rem;
     }
   }
